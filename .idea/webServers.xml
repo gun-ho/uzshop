@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="bfa3c28e-45fb-4c1e-9e12-6d8c2a2bb8d8" name="uzshop">
+        <fileTransfer rootFolder="/var/www/uzshop" accessType="SFTP" host="178.218.207.73" port="22" sshConfigId="947582da-31ca-42a1-805b-cbb0ec76697d" sshConfig="root@178.218.207.73:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

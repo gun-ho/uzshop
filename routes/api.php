@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Api\BrandController;
+use App\Http\Controllers\Api\ProductController;
+use App\Http\Controllers\Api\ReviewController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,14 +17,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('test', function () {
-    $data = [
-        "status" => "200",
-        "message" => "Чо там Шер"
-    ];
+Route::get('products',          [ProductController::class, 'index'])->name('product.list');
+Route::get('product/{product}', [ProductController::class, 'show'])->name('product.show');
 
-    return response()->json($data);
-});
+Route::get('product/{product}/reviews', [ReviewController::class, 'index'])->name('review.list');
+
+Route::get('brands', [BrandController::class, 'index']);
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
 
